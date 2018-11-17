@@ -21,6 +21,9 @@ class ItemDetails extends Component {
     render() {
         const { item } = this.state
         const { classes } = this.props
+
+        if (!item) return null
+
         return (
             <Image
                 className={classes.image}

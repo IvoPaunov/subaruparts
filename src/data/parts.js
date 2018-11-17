@@ -1,4 +1,4 @@
-export const getPartImgsUrls = (imgs) => imgs.map(img => '/static/images/parts/' + img)
+export const getPartImgsUrls = (imgs) => imgs.map(img => process.env.PUBLIC_URL + '/static/images/parts/' + img)
 
 /*
 {

@@ -31,7 +31,7 @@ class ItemCard extends Component {
 
   render() {
     const { classes, part } = this.props
-    const to = '/' + slugify(part.name)
+    const to = process.env.PUBLIC_URL + '/' + slugify(part.name)
 
     return (
       <Card className={classes.card}>

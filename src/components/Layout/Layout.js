@@ -27,11 +27,11 @@ const RRListItem = RRLink(ListItem)
 class ResponsiveDrawer extends React.Component {
   state = {
     mobileOpen: false,
-  };
+  }
 
   handleDrawerToggle = () => {
     this.setState(state => ({ mobileOpen: !state.mobileOpen }));
-  };
+  }
 
   render() {
     const { classes, theme } = this.props;
@@ -41,7 +41,7 @@ class ResponsiveDrawer extends React.Component {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          <RRListItem button key={'parts'} to='/'>
+          <RRListItem button key={'parts'} to={process.env.PUBLIC_URL + '/'}>
             <ListItemIcon><EngineIcon /></ListItemIcon>
             <ListItemText primary='Всички части' />
           </RRListItem>
@@ -104,8 +104,8 @@ class ResponsiveDrawer extends React.Component {
             <div className={classes.toolbar} />
 
             <div>
-              <Route path="/" exact component={Parts} />
-              <Route path="/:item" exact component={ItemDetails} />
+              <Route path={process.env.PUBLIC_URL + '/'} exact component={Parts} />
+              <Route path={process.env.PUBLIC_URL + '/:item'} exact component={ItemDetails} />
             </div>
 
           </main>
