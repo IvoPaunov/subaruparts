@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/subaruparts/precache-manifest.0b07aad280d882226b842fe5055b1b1f.js"
+  "/subaruparts/precache-manifest.101b31c31d32eab474dca31603ef935e.js"
 );
 
 workbox.clientsClaim();
