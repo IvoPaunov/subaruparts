@@ -18,7 +18,7 @@ import EngineIcon from '@material-ui/icons/Extension'
 import { styles } from './styles'
 import Parts from 'components/Parts'
 import ItemDetails from 'components/ItemDetails'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
 import RRLink from 'components/RRLink'
 
 const RRListItem = RRLink(ListItem)
@@ -50,8 +50,8 @@ class ResponsiveDrawer extends React.Component {
     )
 
     return (
-      <Router>
-        <div className={classes.root}>
+      <Router >
+        <div className={classes.root} >
 
           <CssBaseline />
           <AppBar position="fixed" className={classes.appBar}>
@@ -103,8 +103,10 @@ class ResponsiveDrawer extends React.Component {
           <main className={classes.content}>
             <div className={classes.toolbar} />
             <div>
-              <Route path={process.env.PUBLIC_URL + '/'} exact component={Parts} />
-              <Route path={process.env.PUBLIC_URL + '/:item'} exact component={ItemDetails} />
+              <Switch>
+                <Route path={'/'} exact component={Parts} />
+                <Route path={'/:item'} exact component={ItemDetails} />
+              </Switch>
             </div>
           </main>
         </div>
