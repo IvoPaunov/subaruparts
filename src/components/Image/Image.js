@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import { styles } from './styles'
-import FullscreenIcon from '@material-ui/icons/Fullscreen'
+import ZoomInIcon from '@material-ui/icons/ZoomIn'
 import Dialog from '@material-ui/core/Dialog'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -47,11 +47,11 @@ class Img extends Component {
                 <Button
                     variant='fab'
                     mini
-                    color='default'
+                    color='secondary'
                     className={classnames(classes.fullscreenIcon)}
                     onClick={() => { this.handleToggle() }}
                 >
-                    <FullscreenIcon />
+                    <ZoomInIcon />
                 </Button>
                 <Dialog
                     open={this.state.active}

@@ -13,7 +13,9 @@ export default Component => {
             event.preventDefault()
             const { to } = this.props
 
-            this.props.history.push(to)
+            const goTo = process.env.PUBLIC_URL + to
+
+            this.props.history.push(goTo)
         }
 
         render() {

@@ -1,9 +1,14 @@
 export const styles = theme => ({
     root: {
       display: 'flex',
+      flexGrow: 1
     },
     image: {
-        width: 100,
-        height: 100,
+      display: 'flex',
+      flex: 1
+    },
+    imageGridItem: {
+      display: 'flex',
+      height: 200
     }
   })

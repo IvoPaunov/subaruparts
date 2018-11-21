@@ -41,7 +41,7 @@ class ResponsiveDrawer extends React.Component {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          <RRListItem button key={'parts'} to={process.env.PUBLIC_URL + '/'}>
+          <RRListItem button key={'parts'} to={'/'}>
             <ListItemIcon><EngineIcon /></ListItemIcon>
             <ListItemText primary='Всички части' />
           </RRListItem>
@@ -65,8 +65,8 @@ class ResponsiveDrawer extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" color="inherit" noWrap>
-                Subaru (Субару) Legacy B14 2010 20D Boxer Diesel 2.0 6MT на части
-            </Typography>
+                {'Subaru (Субару) Legacy B14 2010 20D Boxer Diesel 2.0 6MT на части'}
+              </Typography>
             </Toolbar>
           </AppBar>
           <nav className={classes.drawer}>
@@ -102,14 +102,11 @@ class ResponsiveDrawer extends React.Component {
           </nav>
           <main className={classes.content}>
             <div className={classes.toolbar} />
-
             <div>
               <Route path={process.env.PUBLIC_URL + '/'} exact component={Parts} />
               <Route path={process.env.PUBLIC_URL + '/:item'} exact component={ItemDetails} />
             </div>
-
           </main>
-
         </div>
       </Router>
     )

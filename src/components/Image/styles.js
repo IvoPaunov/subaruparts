@@ -10,11 +10,12 @@ export const styles = theme => ({
         width: 'auto',
         height: 'auto',
         position: 'relative',
-        display: 'inline-block'
+        display: 'flex',
+        flex: '1 1 auto'
     },
     fullscreenIcon: {
         position: 'absolute',
-        top: theme.spacing.unit,
+        bottom: theme.spacing.unit,
         right: theme.spacing.unit,
         cursor: 'pointer'
     },
@@ -27,10 +28,8 @@ export const styles = theme => ({
     },
     dialogImageParent: {
         '@media(max-width:1080px)': {
-            width: '80vw',
-            height: '100vw',
-            display: 'block',
-            margin: 'auto',
+            display: 'flex',
+            flex: '1 1 auto',
         },
         '@media(max-width:744px)': {
             paddingLeft: 0,
